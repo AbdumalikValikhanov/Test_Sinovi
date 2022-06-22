@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/second_nav_graph.xml"
+    app:startDestination="@id/chooseTest">
+
+    <fragment
+        android:id="@+id/chooseTest"
+        android:name="com.example.testsinovi.UI.ChooseTestFragment"
+        android:label="ChooseTestFragment" />
+    <fragment
+        android:id="@+id/searchQuestion"
+        android:name="com.example.testsinovi.UI.SearchQuestionFragment"
+        android:label="SearchQuestionFragment" />
+
+</navigation>
