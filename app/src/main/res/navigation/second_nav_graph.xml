@@ -2,15 +2,41 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/second_nav_graph.xml"
-    app:startDestination="@id/chooseTest">
+    app:startDestination="@id/searchQuestion">
 
     <fragment
         android:id="@+id/chooseTest"
         android:name="com.example.testsinovi.UI.ChooseTestFragment"
-        android:label="ChooseTestFragment" />
+        android:label="ChooseTestFragment" >
+        <action
+            android:id="@+id/action_chooseTest_to_testFragment2"
+            app:destination="@id/testFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/searchQuestion"
         android:name="com.example.testsinovi.UI.SearchQuestionFragment"
-        android:label="SearchQuestionFragment" />
+        android:label="SearchQuestionFragment" >
+        <action
+
+            android:id="@+id/action_searchQuestion_to_answerFragment"
+            app:destination="@id/answerFragment">
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.testsinovi.UI.AnswerFragment"
+        android:label="AnswerFragment" >
+        <argument
+            android:name="currentquestion"
+            app:argType="com.example.testsinovi.model.Question"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment2"
+        android:name="com.example.testsinovi.UI.TestFragment"
+        android:label="TestFragment" />
 
 </navigation>

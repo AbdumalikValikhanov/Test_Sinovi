@@ -23,7 +23,7 @@ public abstract class AppDataBase extends RoomDatabase{
             try {
 
                 dataBase=Room.databaseBuilder(context,AppDataBase.class,"Test.db")
-                        .createFromAsset("Test.db")
+                        .createFromAsset("Test.db").allowMainThreadQueries()
                         .build();
                 Toast.makeText(context,"Databse working",Toast.LENGTH_LONG).show();
             }

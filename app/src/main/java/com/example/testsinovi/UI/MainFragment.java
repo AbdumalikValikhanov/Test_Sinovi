@@ -23,11 +23,11 @@ public class MainFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         binding=FragmentMainBinding.bind(view);
         NavHostFragment navHostFragment= (NavHostFragment) getChildFragmentManager().findFragmentById(R.id.second_fragment_container);
         NavController navController=navHostFragment.getNavController();
         NavigationUI.setupWithNavController(binding.bottomAppbar,navController);
         AppDataBase database =AppDataBase.getDataBase(getContext());
-//        Toast.makeText(getContext(),database.questionDao().getAll().size()+"",Toast.LENGTH_LONG).show();
     }
 }
